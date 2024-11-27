@@ -1,18 +1,13 @@
 function q1(){
 
-    Number(num % 2 == 0 || num % 3 == 0 || num % 5 == 0) == 1 ? console.log('1') :
-    Number(num % 2 == 1 && num % 3 == 1 && num% 5 == 1) == 1 ? console.log('3') :
-    console.log('2')
+  const num = 120
 
-    // const num = 15
-
-    // let count = 0
-
-    // count += num %2 == 0
-    // count += num %3 == 0
-    // count += num %5 == 0
-    // console.log(count)
-
+    Number(num % 2 == 0 && num % 3 == 0 && num % 5 == 0) == 1 ? console.log('3') : 
+    Number(num % 2 == 0 || num % 3 == 0 || num % 5 == 0) == 1 ? console.log('1') : 
+    Number(num % 2 == 0) ? console.log('2') :
+    Number(num % 3 == 0) ? console.log('2') :
+    Number(num % 5 == 0) ? console.log('2') :0
+  
 
 }
 
@@ -55,13 +50,19 @@ function q2(){
 
 function q3(){
 
-    const arr = [1,5,7,1,0,0,1]
+    const arr = [1,5,7,1,0,0,100,120]
 
     let count =0
 
+
+
     for (let num of arr){
     
-     count += num ==0
+    const str = String(num)
+    const split = str.split('')
+     
+    count += split.filter(x=>x == 0).length
+
     }
 
     console.log(count)
@@ -70,4 +71,5 @@ function q3(){
 
 q1()
 q2()
+
 q3()
