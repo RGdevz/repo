@@ -21,7 +21,7 @@ router.get('/:id', (req, res) => {
 
 
 
-// POST /api/admin/create
+
 router.post('/', (req, res) => {
   let { id, name, price ,stock} = req.body;
 
