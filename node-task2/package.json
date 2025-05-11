@@ -1,0 +1,26 @@
+{
+  "name": "matala-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "bun index.ts",
+    "gen": "kysely-gen",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "kysely": "^0.28.2",
+    "mysql2": "^3.14.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1"
+  },
+  "kysely-codegen": {
+    "disablePostProcess": true,
+    "outFile": "./db.d.ts",
+    "url": "mysql://root@localhost:3306/homework"
+  }
+}
